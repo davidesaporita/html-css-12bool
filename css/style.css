@@ -1,0 +1,39 @@
+/* Generals */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding-bottom: 20px;
+}
+
+/* Main content */
+
+/* EXAMPLE 1 */
+/* Scacchiera 12x12 con quadrati fisicamente riempiti di bianco, larga quanto il container - Not responsive*/
+#example-1 > .container > [class^='col-'] {
+  height: calc(1170px/12);
+}
+
+#example-1 > .container:nth-child(even) > [class^='col-']:nth-child(odd),
+#example-1 > .container:nth-child(odd) > [class^='col-']:nth-child(even) {
+  background-color: black;
+  [class='offset']
+}
+
+#example-1 > .container:nth-child(even) > [class^='col-']:nth-child(even),
+#example-1 > .container:nth-child(odd) > [class^='col-']:nth-child(odd) {
+  background-color: white;
+}
