@@ -30,7 +30,6 @@ p {
 #example-1 > .container:nth-child(even) > [class^='col-']:nth-child(odd),
 #example-1 > .container:nth-child(odd) > [class^='col-']:nth-child(even) {
   background-color: black;
-  [class='offset']
 }
 
 #example-1 > .container:nth-child(even) > [class^='col-']:nth-child(even),
