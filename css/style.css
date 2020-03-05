@@ -30,8 +30,31 @@ a:visited {
 /* Utilities */
 
 .mitico {
+  position: relative;
   margin-top: 100px;
   margin-bottom: 100px;
+  background-color: black;
+  height: 20px;
+  color: white;
+  transition: 0.3s;
+}
+
+.mitico:hover {
+  background-color: #ddd;
+  background-image: url('https://i.giphy.com/media/7lsw8RenVcjCM/giphy.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #333;
+  transition: 0.3s ease-in;
+  overflow: visible;
+}
+
+.mitico::after {
+  position: absolute;
+  content: 'Mitico HR';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 /* Main content */
@@ -63,7 +86,12 @@ a:visited {
 /* Vertical bars */
 #example-3 > .container > [class^='col-'] {
   height: calc(1170px/2);
-  background-color: rgba(0,0,0,1);
+  background-color: black;
+}
+
+#example-3 > .container > [class^='col-']:hover {
+  height: calc(1170px/2);
+  background-color: blue;
 }
 
 #example-3 > .container > [class^='col-']:nth-child(2) {
@@ -110,8 +138,56 @@ a:visited {
   opacity: calc(1/12);
 }
 
+#example-3 > .container > [class^='col-']:nth-child(1):hover {
+  opacity: calc(1/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(2):hover {
+  opacity: calc(2/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(3):hover {
+  opacity: calc(3/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(4):hover {
+  opacity: calc(4/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(5):hover {
+  opacity: calc(5/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(6):hover {
+  opacity: calc(6/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(7):hover {
+  opacity: calc(7/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(8):hover {
+  opacity: calc(8/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(9):hover {
+  opacity: calc(9/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(10):hover {
+  opacity: calc(10/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(11):hover {
+  opacity: calc(11/12);
+}
+
+#example-3 > .container > [class^='col-']:nth-child(12):hover {
+  opacity: calc(12/12);
+}
+
 /* EXAMPLE 4 */
-/* Tic Tac Toe */
+/* Tic Tac Tok */
 #example-4 > .container > [class^='col-'] {
   height: calc(1170px/6);
   border-bottom: 10px solid black;
@@ -137,4 +213,221 @@ a:visited {
 
 #example-4 > .container > [class^='col-']:nth-child(3) {
   border-right: none;
+}
+
+/* EXAMPLE 5 */
+/* Nyan TV */
+#example-5 > .container > [class^='col-'] {
+  position: relative;
+  padding: 20px;
+  height: calc(1170px/3);
+}
+
+#example-5 > .container > .col-6::before,
+#example-5 > .container > .col-6::after {
+  position: absolute;
+  content: '';
+  background-position: center;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#example-5 > .container > .col-6::before {
+  width: 80%;
+  height: 80%;
+  background-image: url('../img/nyan-bw.gif');
+}
+
+#example-5 > .container > .col-6::after {
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/tv.png');
+}
+
+/* EXAMPLE 5 */
+/* Scacchiera 8x8 che occupa l'intero width realizzata mediante nesting delle colonne, sprite per gli scacchi, puro css per il posizionamento */
+#example-6 .container > [class^='col-'] > .container > [class^='col-'] {
+  position: relative;
+  height: calc(1170px/8);
+  background-color: #555;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::after {
+  position: absolute;
+  content: '';
+  width: calc(1170px/8);
+  height: calc(1170px/8);
+  top: 50%;
+  background: url('../img/chess-pieces.svg');
+  background-size: auto 300px;
+  background-repeat: no-repeat;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::before {
+  right: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::before {
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::after {
+  left: 50%;
+  transform: translate(50%,-50%);
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(2) > [class^='col-']:nth-of-type(2)::after {
+  background-position: -750px -150px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(1)::after,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::before,
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(7) > [class^='col-']:nth-of-type(2)::after {
+  background-position: -750px 0px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::before {
+  background-position: -600px -150px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::after {
+  background-position: -450px -150px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::before {
+  background-position: -300px -150px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::after {
+  background-position: -150px -150px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::before {
+  background-position: -600px 0px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::after{
+  background-position: -450px 0px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::before {
+  background-position: -300px 0px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(1) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::after {
+  background-position: -150px 0px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::before {
+  background-position: 0px -150px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(1)::after {
+  background-position: -300px -150px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::before {
+  background-position: -450px -150px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(1) > [class^='col-']:nth-of-type(2)::after {
+  background-position: -600px -150px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::before {
+  background-position: 0px 0px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(1)::after {
+  background-position: -300px 0px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::before {
+  background-position: -450px 0px;
+}
+
+#example-6 .container:nth-of-type(1) > [class^='col-']:nth-of-type(2) > .container:nth-of-type(8) > [class^='col-']:nth-of-type(2)::after {
+  background-position: -600px 0px;
+}
+
+/* Footer */
+
+footer {
+  padding-bottom: 40px;
 }
